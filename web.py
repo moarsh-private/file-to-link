@@ -14,8 +14,8 @@ mime_type = {
 
 @app.route("/<file>")
 def home(file):
-    if os.path.exists(f"files/{file}"):
-        return send_file(f"files/{file}")
+    if os.path.exists(f"/app/files/{file}"):
+        return send_file(f"/app/files/{file}")
     else:
         return "File Not Found"
 
