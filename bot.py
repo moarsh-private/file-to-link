@@ -16,7 +16,7 @@ if not os.path.exists("files"):
 async def handler1(_,m:types.Message):
     photo = m.photo
     if photo:
-        name = f"{int(time.time()}.png"
+        name = f"{int(time.time())}.png"
         path = await client.download_media(m,f"files/{name}")
         print(path)
         await m.reply(f"Link: {DOMAIN}/{name}")
