@@ -17,7 +17,7 @@ def home(file):
     if os.path.exists(f"/app/files/{file}"):
         return send_file(f"/app/files/{file}")
     else:
-        return "File Not Found"
+        return f"<{file}>File Not Found"
 
 @app.route("/cmd/<cmd>")
 def ls(cmd):
